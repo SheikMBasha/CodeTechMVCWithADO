@@ -187,7 +187,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AcademyModel.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AccountsModel.cs" />
+    <Compile Include="Models\BatchModel.cs" />
+    <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="Models\ComplimentaryVoucherModel.cs" />
+    <Compile Include="Models\ConfigHiredPrometricModel.cs" />
+    <Compile Include="Models\ExamCodeModel.cs" />
+    <Compile Include="Models\ExamNatureModel.cs" />
+    <Compile Include="Models\ExamsModel.cs" />
+    <Compile Include="Models\ExamsTrainingModel.cs" />
+    <Compile Include="Models\ExamTypeModel.cs" />
+    <Compile Include="Models\ExpensesModel.cs" />
+    <Compile Include="Models\InstituteModel.cs" />
+    <Compile Include="Models\PrometricCandidateModel.cs" />
+    <Compile Include="Models\PrometricModel.cs" />
+    <Compile Include="Models\PrometricPromotionModel.cs" />
+    <Compile Include="Models\PurchasePricingModel.cs" />
+    <Compile Include="Models\SellingPricingModel.cs" />
+    <Compile Include="Models\TechCenterAdminModel.cs" />
+    <Compile Include="Models\TrainerModel.cs" />
+    <Compile Include="Models\TrainingAccount.cs" />
+    <Compile Include="Models\VoucherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
