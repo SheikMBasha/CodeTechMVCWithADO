@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CodeTechnologiesServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CodeTechnologiesWCF.HelperClass.Exams" />
+      <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamNature_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamNature" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamNature_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamNatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamTypes" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamCodes" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllExamCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExamCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllAcademies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAcademies" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllAcademies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAcademiesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICodeTechnologiesServices">
+    <wsdl:operation name="GetAllExamNature">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExams/GetAllExamNatureResponse" message="tns:ICodeTechnologiesServices_GetAllExamNature_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExamTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamTypes" message="tns:ICodeTechnologiesServices_GetAllExamTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExams/GetAllExamTypesResponse" message="tns:ICodeTechnologiesServices_GetAllExamTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExamCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamCodes" message="tns:ICodeTechnologiesServices_GetAllExamCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExams/GetAllExamCodesResponse" message="tns:ICodeTechnologiesServices_GetAllExamCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAcademies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/GetAllAcademies" message="tns:ICodeTechnologiesServices_GetAllAcademies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/GetAllAcademiesResponse" message="tns:ICodeTechnologiesServices_GetAllAcademies_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllExamNature">
+      <soap:operation soapAction="http://tempuri.org/IExams/GetAllExamNature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExamTypes">
+      <soap:operation soapAction="http://tempuri.org/IExams/GetAllExamTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExamCodes">
+      <soap:operation soapAction="http://tempuri.org/IExams/GetAllExamCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAcademies">
+      <soap:operation soapAction="http://tempuri.org/IAcademy/GetAllAcademies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CodeTechnologiesServices">
+    <wsdl:port name="BasicHttpBinding_ICodeTechnologiesServices" binding="tns:BasicHttpBinding_ICodeTechnologiesServices">
+      <soap:address location="http://localhost:53861/CodeTechnologiesServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
