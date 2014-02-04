@@ -32,6 +32,30 @@
   <wsdl:message name="ICodeTechnologiesServices_GetAllAcademies_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllAcademiesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AdddAcademy_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdddAcademy" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AdddAcademy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdddAcademyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAcademy_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAcademy" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAcademy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAcademyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateAcademy_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAcademy" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateAcademy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAcademyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteAcademy_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAcademy" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteAcademy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAcademyResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
       <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
@@ -48,6 +72,22 @@
     <wsdl:operation name="GetAllAcademies">
       <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/GetAllAcademies" message="tns:ICodeTechnologiesServices_GetAllAcademies_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/GetAllAcademiesResponse" message="tns:ICodeTechnologiesServices_GetAllAcademies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdddAcademy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/AdddAcademy" message="tns:ICodeTechnologiesServices_AdddAcademy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/AdddAcademyResponse" message="tns:ICodeTechnologiesServices_AdddAcademy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAcademy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/getAcademy" message="tns:ICodeTechnologiesServices_getAcademy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/getAcademyResponse" message="tns:ICodeTechnologiesServices_getAcademy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAcademy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/UpdateAcademy" message="tns:ICodeTechnologiesServices_UpdateAcademy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/UpdateAcademyResponse" message="tns:ICodeTechnologiesServices_UpdateAcademy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAcademy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/DeleteAcademy" message="tns:ICodeTechnologiesServices_DeleteAcademy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/DeleteAcademyResponse" message="tns:ICodeTechnologiesServices_DeleteAcademy_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -81,6 +121,42 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllAcademies">
       <soap:operation soapAction="http://tempuri.org/IAcademy/GetAllAcademies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdddAcademy">
+      <soap:operation soapAction="http://tempuri.org/IAcademy/AdddAcademy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAcademy">
+      <soap:operation soapAction="http://tempuri.org/IAcademy/getAcademy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAcademy">
+      <soap:operation soapAction="http://tempuri.org/IAcademy/UpdateAcademy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAcademy">
+      <soap:operation soapAction="http://tempuri.org/IAcademy/DeleteAcademy" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
