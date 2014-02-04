@@ -17,4 +17,31 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AcademyModel" nillable="true" type="tns:AcademyModel" />
+  <xs:complexType name="ArrayOfPrometricCandidate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrometricCandidate" nillable="true" type="tns:PrometricCandidate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrometricCandidate" nillable="true" type="tns:ArrayOfPrometricCandidate" />
+  <xs:complexType name="PrometricCandidate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CandidateId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attempts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" type="xs:long" />
+      <xs:element minOccurs="0" name="InstituteId" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Abroad" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrometricCandidate" nillable="true" type="tns:PrometricCandidate" />
 </xs:schema>

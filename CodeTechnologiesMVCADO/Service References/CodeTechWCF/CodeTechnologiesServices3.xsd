@@ -100,4 +100,16 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllPrometricCandidates">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPrometricCandidatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass" minOccurs="0" name="GetAllPrometricCandidatesResult" nillable="true" type="q8:ArrayOfPrometricCandidate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

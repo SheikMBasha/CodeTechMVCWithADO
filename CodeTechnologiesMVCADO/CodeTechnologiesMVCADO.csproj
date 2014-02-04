@@ -194,6 +194,7 @@
     <Compile Include="Controllers\AcademyController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PrometricCandidateController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -312,6 +313,9 @@
     <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.ExamsType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.disco" />
     <None Include="Service References\CodeTechWCF\configuration91.svcinfo" />
     <None Include="Service References\CodeTechWCF\configuration.svcinfo" />
@@ -376,6 +380,8 @@
     <Content Include="Views\Academy\Details.cshtml" />
     <Content Include="Views\Academy\Edit.cshtml" />
     <Content Include="Views\Academy\Delete.cshtml" />
+    <Content Include="Views\PrometricCandidate\Index.cshtml" />
+    <Content Include="Views\PrometricCandidate\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -56,6 +56,12 @@
   <wsdl:message name="ICodeTechnologiesServices_DeleteAcademy_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteAcademyResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllPrometricCandidates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPrometricCandidates" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllPrometricCandidates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPrometricCandidatesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
       <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
@@ -88,6 +94,10 @@
     <wsdl:operation name="DeleteAcademy">
       <wsdl:input wsaw:Action="http://tempuri.org/IAcademy/DeleteAcademy" message="tns:ICodeTechnologiesServices_DeleteAcademy_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAcademy/DeleteAcademyResponse" message="tns:ICodeTechnologiesServices_DeleteAcademy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPrometricCandidates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidates" message="tns:ICodeTechnologiesServices_GetAllPrometricCandidates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidatesResponse" message="tns:ICodeTechnologiesServices_GetAllPrometricCandidates_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -157,6 +167,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteAcademy">
       <soap:operation soapAction="http://tempuri.org/IAcademy/DeleteAcademy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPrometricCandidates">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidates" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
