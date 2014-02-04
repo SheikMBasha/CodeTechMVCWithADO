@@ -1,0 +1,128 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.Prometric
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Prometric</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteId)
+            @Html.ValidationMessageFor(model => model.SiteId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.POCName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.POCName)
+            @Html.ValidationMessageFor(model => model.POCName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.POCPhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.POCPhone)
+            @Html.ValidationMessageFor(model => model.POCPhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.POCEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.POCEmail)
+            @Html.ValidationMessageFor(model => model.POCEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteAddress)
+            @Html.ValidationMessageFor(model => model.SiteAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsHired)
+        </div>
+        <div class="editor-field">
+            @Html.CheckBox("IsHired")
+            @Html.ValidationMessageFor(model => model.IsHired)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PerExamProfit)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.PerExamProfit, new { @placeholder = "Enabled Only if Prometric is Hired!!" })
+            @Html.ValidationMessageFor(model => model.PerExamProfit)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TCAAdminId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TCAAdminId)
+            @Html.ValidationMessageFor(model => model.TCAAdminId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteOwnerName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteOwnerName)
+            @Html.ValidationMessageFor(model => model.SiteOwnerName)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script src="~/Scripts/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(document).ready(initialize);
+    function initialize() {
+        $('#PerExamProfit').attr("disabled", "disabled");
+    }
+
+    $('#IsHired').click(function () {
+        if ($('#IsHired').is(':checked')) {
+            $('#PerExamProfit').removeAttr("disabled");
+        }
+        else {
+            $('#PerExamProfit').attr("disabled", "disabled");
+            $('#PerExamProfit').val("");
+            
+        }
+    });
+</script>

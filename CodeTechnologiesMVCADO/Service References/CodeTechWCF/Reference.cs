@@ -638,6 +638,195 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Prometric", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class Prometric : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SiteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string POCNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int POCPhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string POCEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SiteAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsHiredField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PerExamProfitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TCAAdminIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SiteOwnerNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SiteId {
+            get {
+                return this.SiteIdField;
+            }
+            set {
+                if ((this.SiteIdField.Equals(value) != true)) {
+                    this.SiteIdField = value;
+                    this.RaisePropertyChanged("SiteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string POCName {
+            get {
+                return this.POCNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.POCNameField, value) != true)) {
+                    this.POCNameField = value;
+                    this.RaisePropertyChanged("POCName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public int POCPhone {
+            get {
+                return this.POCPhoneField;
+            }
+            set {
+                if ((this.POCPhoneField.Equals(value) != true)) {
+                    this.POCPhoneField = value;
+                    this.RaisePropertyChanged("POCPhone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string POCEmail {
+            get {
+                return this.POCEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.POCEmailField, value) != true)) {
+                    this.POCEmailField = value;
+                    this.RaisePropertyChanged("POCEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public string SiteAddress {
+            get {
+                return this.SiteAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SiteAddressField, value) != true)) {
+                    this.SiteAddressField = value;
+                    this.RaisePropertyChanged("SiteAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public System.Nullable<bool> IsHired {
+            get {
+                return this.IsHiredField;
+            }
+            set {
+                if ((this.IsHiredField.Equals(value) != true)) {
+                    this.IsHiredField = value;
+                    this.RaisePropertyChanged("IsHired");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public string PerExamProfit {
+            get {
+                return this.PerExamProfitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PerExamProfitField, value) != true)) {
+                    this.PerExamProfitField = value;
+                    this.RaisePropertyChanged("PerExamProfit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public int TCAAdminId {
+            get {
+                return this.TCAAdminIdField;
+            }
+            set {
+                if ((this.TCAAdminIdField.Equals(value) != true)) {
+                    this.TCAAdminIdField = value;
+                    this.RaisePropertyChanged("TCAAdminId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public string SiteOwnerName {
+            get {
+                return this.SiteOwnerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SiteOwnerNameField, value) != true)) {
+                    this.SiteOwnerNameField = value;
+                    this.RaisePropertyChanged("SiteOwnerName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CodeTechWCF.ICodeTechnologiesServices")]
     public interface ICodeTechnologiesServices {
@@ -695,6 +884,36 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidates", ReplyAction="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidatesResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate>> GetAllPrometricCandidatesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/GetAllPrometrics", ReplyAction="http://tempuri.org/IPrometric/GetAllPrometricsResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/GetAllPrometrics", ReplyAction="http://tempuri.org/IPrometric/GetAllPrometricsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric>> GetAllPrometricsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/AddPrometric", ReplyAction="http://tempuri.org/IPrometric/AddPrometricResponse")]
+        void AddPrometric(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/AddPrometric", ReplyAction="http://tempuri.org/IPrometric/AddPrometricResponse")]
+        System.Threading.Tasks.Task AddPrometricAsync(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/getPrometric", ReplyAction="http://tempuri.org/IPrometric/getPrometricResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.Prometric getPrometric(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/getPrometric", ReplyAction="http://tempuri.org/IPrometric/getPrometricResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> getPrometricAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/UpdatePrometric", ReplyAction="http://tempuri.org/IPrometric/UpdatePrometricResponse")]
+        void UpdatePrometric(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/UpdatePrometric", ReplyAction="http://tempuri.org/IPrometric/UpdatePrometricResponse")]
+        System.Threading.Tasks.Task UpdatePrometricAsync(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/DeletePrometric", ReplyAction="http://tempuri.org/IPrometric/DeletePrometricResponse")]
+        void DeletePrometric(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/DeletePrometric", ReplyAction="http://tempuri.org/IPrometric/DeletePrometricResponse")]
+        System.Threading.Tasks.Task DeletePrometricAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -794,6 +1013,46 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate>> GetAllPrometricCandidatesAsync() {
             return base.Channel.GetAllPrometricCandidatesAsync();
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics() {
+            return base.Channel.GetAllPrometrics();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric>> GetAllPrometricsAsync() {
+            return base.Channel.GetAllPrometricsAsync();
+        }
+        
+        public void AddPrometric(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj) {
+            base.Channel.AddPrometric(pObj);
+        }
+        
+        public System.Threading.Tasks.Task AddPrometricAsync(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj) {
+            return base.Channel.AddPrometricAsync(pObj);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.Prometric getPrometric(int id) {
+            return base.Channel.getPrometric(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> getPrometricAsync(int id) {
+            return base.Channel.getPrometricAsync(id);
+        }
+        
+        public void UpdatePrometric(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj) {
+            base.Channel.UpdatePrometric(pObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePrometricAsync(CodeTechnologiesMVCADO.CodeTechWCF.Prometric pObj) {
+            return base.Channel.UpdatePrometricAsync(pObj);
+        }
+        
+        public void DeletePrometric(int id) {
+            base.Channel.DeletePrometric(id);
+        }
+        
+        public System.Threading.Tasks.Task DeletePrometricAsync(int id) {
+            return base.Channel.DeletePrometricAsync(id);
         }
     }
 }

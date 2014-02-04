@@ -1,0 +1,103 @@
+﻿@model IEnumerable<CodeTechnologiesMVCADO.CodeTechWCF.Prometric>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POCName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POCPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POCEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHired)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PerExamProfit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCAAdminId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteOwnerName)
+        </th>
+        <th>
+            Actions
+        </th>
+        <th>
+            Promotions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POCName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POCPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POCEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHired)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PerExamProfit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCAAdminId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteOwnerName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.SiteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SiteId}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SiteId})
+        </td>
+         <td>
+            @if(item.IsHired != true)
+            {
+                @Html.ActionLink("Show/Create", "IndexWithId", "Promotions", new { siteId = item.SiteId }, null);
+            }
+            else
+            {
+                <p> Promotions Not Allowed </p>
+            }
+        </td>
+    </tr>
+}
+
+</table>
+

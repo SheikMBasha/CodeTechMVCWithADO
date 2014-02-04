@@ -44,4 +44,25 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PrometricCandidate" nillable="true" type="tns:PrometricCandidate" />
+  <xs:complexType name="ArrayOfPrometric">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Prometric" nillable="true" type="tns:Prometric" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrometric" nillable="true" type="tns:ArrayOfPrometric" />
+  <xs:complexType name="Prometric">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POCPhone" type="xs:int" />
+      <xs:element minOccurs="0" name="POCEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsHired" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PerExamProfit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCAAdminId" type="xs:int" />
+      <xs:element minOccurs="0" name="SiteOwnerName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Prometric" nillable="true" type="tns:Prometric" />
 </xs:schema>
