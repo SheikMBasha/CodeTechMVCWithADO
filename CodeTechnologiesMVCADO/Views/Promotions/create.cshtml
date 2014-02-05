@@ -1,0 +1,68 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions
+
+@{
+    ViewBag.Title = "create";
+}
+
+<h2>create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PrometricPromotions</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteId)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.SiteId, new { @readonly = "readonly", @Value = ViewBag.passedSiteID })
+            @Html.ValidationMessageFor(model => model.SiteId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateFrom)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.DateFrom,  new { @class = "datefield", type = "date" })
+            @Html.ValidationMessageFor(model => model.DateFrom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DateTo)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.DateTo,  new { @class = "datefield", type = "date" })
+            @Html.ValidationMessageFor(model => model.DateTo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MarginGain)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MarginGain)
+            @Html.ValidationMessageFor(model => model.MarginGain)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MarginMiss)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MarginMiss)
+            @Html.ValidationMessageFor(model => model.MarginMiss)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

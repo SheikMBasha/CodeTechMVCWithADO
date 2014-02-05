@@ -6,6 +6,7 @@
       <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CodeTechnologiesWCF.HelperClass.Exams" />
       <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass" />
+      <xsd:import schemaLocation="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICodeTechnologiesServices_GetAllExamNature_InputMessage">
@@ -62,6 +63,12 @@
   <wsdl:message name="ICodeTechnologiesServices_GetAllPrometricCandidates_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPrometricCandidatesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_BulkUploadPrometricCandidates_InputMessage">
+    <wsdl:part name="parameters" element="tns:BulkUploadPrometricCandidates" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_BulkUploadPrometricCandidates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BulkUploadPrometricCandidatesResponse" />
+  </wsdl:message>
   <wsdl:message name="ICodeTechnologiesServices_GetAllPrometrics_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPrometrics" />
   </wsdl:message>
@@ -91,6 +98,42 @@
   </wsdl:message>
   <wsdl:message name="ICodeTechnologiesServices_DeletePrometric_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletePrometricResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAllPrometricPromotions_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllPrometricPromotions" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAllPrometricPromotions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllPrometricPromotionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricPromotionWithSiteId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricPromotionWithSiteId" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricPromotionWithSiteId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricPromotionWithSiteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPrometricPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrometricPromotion" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPrometricPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrometricPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricPromotion" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePrometricPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrometricPromotion" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePrometricPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrometricPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePrometricPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrometricPromotion" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePrometricPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrometricPromotionResponse" />
   </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
@@ -129,6 +172,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidates" message="tns:ICodeTechnologiesServices_GetAllPrometricCandidates_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidatesResponse" message="tns:ICodeTechnologiesServices_GetAllPrometricCandidates_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="BulkUploadPrometricCandidates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates" message="tns:ICodeTechnologiesServices_BulkUploadPrometricCandidates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidatesResponse" message="tns:ICodeTechnologiesServices_BulkUploadPrometricCandidates_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetAllPrometrics">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometric/GetAllPrometrics" message="tns:ICodeTechnologiesServices_GetAllPrometrics_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrometric/GetAllPrometricsResponse" message="tns:ICodeTechnologiesServices_GetAllPrometrics_OutputMessage" />
@@ -148,6 +195,30 @@
     <wsdl:operation name="DeletePrometric">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometric/DeletePrometric" message="tns:ICodeTechnologiesServices_DeletePrometric_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrometric/DeletePrometricResponse" message="tns:ICodeTechnologiesServices_DeletePrometric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllPrometricPromotions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotions" message="tns:ICodeTechnologiesServices_getAllPrometricPromotions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotionsResponse" message="tns:ICodeTechnologiesServices_getAllPrometricPromotions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricPromotionWithSiteId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteId" message="tns:ICodeTechnologiesServices_getPrometricPromotionWithSiteId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteIdResponse" message="tns:ICodeTechnologiesServices_getPrometricPromotionWithSiteId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPrometricPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/AddPrometricPromotion" message="tns:ICodeTechnologiesServices_AddPrometricPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/AddPrometricPromotionResponse" message="tns:ICodeTechnologiesServices_AddPrometricPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotion" message="tns:ICodeTechnologiesServices_getPrometricPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotionResponse" message="tns:ICodeTechnologiesServices_getPrometricPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrometricPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotion" message="tns:ICodeTechnologiesServices_UpdatePrometricPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotionResponse" message="tns:ICodeTechnologiesServices_UpdatePrometricPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrometricPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion" message="tns:ICodeTechnologiesServices_DeletePrometricPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotionResponse" message="tns:ICodeTechnologiesServices_DeletePrometricPromotion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -233,6 +304,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BulkUploadPrometricCandidates">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllPrometrics">
       <soap:operation soapAction="http://tempuri.org/IPrometric/GetAllPrometrics" style="document" />
       <wsdl:input>
@@ -271,6 +351,60 @@
     </wsdl:operation>
     <wsdl:operation name="DeletePrometric">
       <soap:operation soapAction="http://tempuri.org/IPrometric/DeletePrometric" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllPrometricPromotions">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricPromotionWithSiteId">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPrometricPromotion">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/AddPrometricPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricPromotion">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrometricPromotion">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrometricPromotion">
+      <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

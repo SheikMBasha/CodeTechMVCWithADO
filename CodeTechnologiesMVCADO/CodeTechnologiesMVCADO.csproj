@@ -321,7 +321,13 @@
     <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.Prometric.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.disco" />
+    <None Include="Service References\CodeTechWCF\CodeTechnologiesServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CodeTechWCF\configuration91.svcinfo" />
     <None Include="Service References\CodeTechWCF\configuration.svcinfo" />
     <None Include="Service References\CodeTechWCF\Reference.svcmap">
@@ -385,13 +391,20 @@
     <Content Include="Views\Academy\Details.cshtml" />
     <Content Include="Views\Academy\Edit.cshtml" />
     <Content Include="Views\Academy\Delete.cshtml" />
-    <Content Include="Views\PrometricCandidate\Index.cshtml" />
-    <Content Include="Views\PrometricCandidate\Create.cshtml" />
     <Content Include="Views\Prometric\Create.cshtml" />
+    <Content Include="Views\Prometric\Delete.cshtml" />
     <Content Include="Views\Prometric\Details.cshtml" />
     <Content Include="Views\Prometric\Edit.cshtml" />
-    <Content Include="Views\Prometric\Delete.cshtml" />
     <Content Include="Views\Prometric\Index.cshtml" />
+    <Content Include="Views\PrometricCandidate\BulkUpload.cshtml" />
+    <Content Include="Views\PrometricCandidate\Create.cshtml" />
+    <Content Include="Views\PrometricCandidate\Index.cshtml" />
+    <Content Include="Views\Promotions\create.cshtml" />
+    <Content Include="Views\Promotions\delete.cshtml" />
+    <Content Include="Views\Promotions\details.cshtml" />
+    <Content Include="Views\Promotions\edit.cshtml" />
+    <Content Include="Views\Promotions\Index.cshtml" />
+    <Content Include="Views\Promotions\Indexwithid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,6 +25,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="CodeTechnologiesServices.xsd" MetadataType="Schema" ID="396a78b5-e531-4972-b6d0-2c095f1dc985" SourceId="1" SourceUrl="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="CodeTechnologiesServices4.xsd" MetadataType="Schema" ID="191bd7f1-d501-41c4-a125-daa719911e07" SourceId="1" SourceUrl="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd4" />
     <MetadataFile FileName="CodeTechnologiesServices1.xsd" MetadataType="Schema" ID="a1934416-2a74-407d-985f-621d0fa7df77" SourceId="1" SourceUrl="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd1" />
     <MetadataFile FileName="CodeTechnologiesServices.disco" MetadataType="Disco" ID="50da9003-f422-4c22-b5de-de9d926de8c2" SourceId="1" SourceUrl="http://localhost:53861/CodeTechnologiesServices.svc?disco" />
     <MetadataFile FileName="CodeTechnologiesServices2.xsd" MetadataType="Schema" ID="43016183-f2b7-40b2-8f7b-2a533f79f9db" SourceId="1" SourceUrl="http://localhost:53861/CodeTechnologiesServices.svc?xsd=xsd3" />

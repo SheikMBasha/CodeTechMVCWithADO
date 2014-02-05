@@ -640,6 +640,83 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FileData", Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    [System.SerializableAttribute()]
+    public partial class FileData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] BufferDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FilePositionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] BufferData {
+            get {
+                return this.BufferDataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BufferDataField, value) != true)) {
+                    this.BufferDataField = value;
+                    this.RaisePropertyChanged("BufferData");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FilePosition {
+            get {
+                return this.FilePositionField;
+            }
+            set {
+                if ((this.FilePositionField.Equals(value) != true)) {
+                    this.FilePositionField = value;
+                    this.RaisePropertyChanged("FilePosition");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Prometric", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
     [System.SerializableAttribute()]
     public partial class Prometric : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -827,6 +904,131 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PrometricPromotions", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class PrometricPromotions : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> SiteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> MarginGainField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> MarginMissField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public System.Nullable<int> SiteId {
+            get {
+                return this.SiteIdField;
+            }
+            set {
+                if ((this.SiteIdField.Equals(value) != true)) {
+                    this.SiteIdField = value;
+                    this.RaisePropertyChanged("SiteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public System.DateTime DateFrom {
+            get {
+                return this.DateFromField;
+            }
+            set {
+                if ((this.DateFromField.Equals(value) != true)) {
+                    this.DateFromField = value;
+                    this.RaisePropertyChanged("DateFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public System.DateTime DateTo {
+            get {
+                return this.DateToField;
+            }
+            set {
+                if ((this.DateToField.Equals(value) != true)) {
+                    this.DateToField = value;
+                    this.RaisePropertyChanged("DateTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public System.Nullable<int> MarginGain {
+            get {
+                return this.MarginGainField;
+            }
+            set {
+                if ((this.MarginGainField.Equals(value) != true)) {
+                    this.MarginGainField = value;
+                    this.RaisePropertyChanged("MarginGain");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public System.Nullable<int> MarginMiss {
+            get {
+                return this.MarginMissField;
+            }
+            set {
+                if ((this.MarginMissField.Equals(value) != true)) {
+                    this.MarginMissField = value;
+                    this.RaisePropertyChanged("MarginMiss");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CodeTechWCF.ICodeTechnologiesServices")]
     public interface ICodeTechnologiesServices {
@@ -885,6 +1087,12 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidates", ReplyAction="http://tempuri.org/IPrometricCandidate/GetAllPrometricCandidatesResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate>> GetAllPrometricCandidatesAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates", ReplyAction="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidatesResponse")]
+        void BulkUploadPrometricCandidates(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates", ReplyAction="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidatesResponse")]
+        System.Threading.Tasks.Task BulkUploadPrometricCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/GetAllPrometrics", ReplyAction="http://tempuri.org/IPrometric/GetAllPrometricsResponse")]
         System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics();
         
@@ -914,6 +1122,42 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/DeletePrometric", ReplyAction="http://tempuri.org/IPrometric/DeletePrometricResponse")]
         System.Threading.Tasks.Task DeletePrometricAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotions", ReplyAction="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotionsResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getAllPrometricPromotions();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotions", ReplyAction="http://tempuri.org/IPrometricPromotions/getAllPrometricPromotionsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions>> getAllPrometricPromotionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteId", ReplyAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteIdResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getPrometricPromotionWithSiteId(System.Nullable<int> id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteId", ReplyAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotionWithSiteIdResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions>> getPrometricPromotionWithSiteIdAsync(System.Nullable<int> id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/AddPrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/AddPrometricPromotionResponse")]
+        void AddPrometricPromotion(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/AddPrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/AddPrometricPromotionResponse")]
+        System.Threading.Tasks.Task AddPrometricPromotionAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotionResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions getPrometricPromotion(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/getPrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/getPrometricPromotionResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getPrometricPromotionAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotionResponse")]
+        void UpdatePrometricPromotion(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/UpdatePrometricPromotionResponse")]
+        System.Threading.Tasks.Task UpdatePrometricPromotionAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotionResponse")]
+        void DeletePrometricPromotion(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotionResponse")]
+        System.Threading.Tasks.Task DeletePrometricPromotionAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1015,6 +1259,14 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
             return base.Channel.GetAllPrometricCandidatesAsync();
         }
         
+        public void BulkUploadPrometricCandidates(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel) {
+            base.Channel.BulkUploadPrometricCandidates(inputexcel);
+        }
+        
+        public System.Threading.Tasks.Task BulkUploadPrometricCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel) {
+            return base.Channel.BulkUploadPrometricCandidatesAsync(inputexcel);
+        }
+        
         public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics() {
             return base.Channel.GetAllPrometrics();
         }
@@ -1053,6 +1305,54 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task DeletePrometricAsync(int id) {
             return base.Channel.DeletePrometricAsync(id);
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getAllPrometricPromotions() {
+            return base.Channel.getAllPrometricPromotions();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions>> getAllPrometricPromotionsAsync() {
+            return base.Channel.getAllPrometricPromotionsAsync();
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getPrometricPromotionWithSiteId(System.Nullable<int> id) {
+            return base.Channel.getPrometricPromotionWithSiteId(id);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions>> getPrometricPromotionWithSiteIdAsync(System.Nullable<int> id) {
+            return base.Channel.getPrometricPromotionWithSiteIdAsync(id);
+        }
+        
+        public void AddPrometricPromotion(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj) {
+            base.Channel.AddPrometricPromotion(ppObj);
+        }
+        
+        public System.Threading.Tasks.Task AddPrometricPromotionAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj) {
+            return base.Channel.AddPrometricPromotionAsync(ppObj);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions getPrometricPromotion(int id) {
+            return base.Channel.getPrometricPromotion(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions> getPrometricPromotionAsync(int id) {
+            return base.Channel.getPrometricPromotionAsync(id);
+        }
+        
+        public void UpdatePrometricPromotion(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj) {
+            base.Channel.UpdatePrometricPromotion(ppObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePrometricPromotionAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions ppObj) {
+            return base.Channel.UpdatePrometricPromotionAsync(ppObj);
+        }
+        
+        public void DeletePrometricPromotion(int id) {
+            base.Channel.DeletePrometricPromotion(id);
+        }
+        
+        public System.Threading.Tasks.Task DeletePrometricPromotionAsync(int id) {
+            return base.Channel.DeletePrometricPromotionAsync(id);
         }
     }
 }

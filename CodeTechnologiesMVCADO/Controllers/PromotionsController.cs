@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeTechnologiesMVCADO.CodeTechWCF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,36 +9,25 @@ namespace CodeTechnologiesMVCADO.Controllers
 {
     public class PromotionsController : Controller
     {
+        CodeTechnologiesServicesClient proxy = new CodeTechnologiesServicesClient();
+
         public ActionResult Index()
         {
-            using (var db = new sadiqEntities2())
-            {
-                List<prometricpromotion> prometricPromotionList = db.prometricpromotions.ToList();
-                return View(prometricPromotionList);
-            }
+            var promotionsList = proxy.getAllPrometricPromotions();
+            return View(promotionsList);
         }
 
-        public ActionResult IndexWithId(int? siteID)
+        public ActionResult Indexwithid(int? siteid)
         {
-            using (var db = new sadiqEntities2())
-            {
-                List<prometricpromotion> prometricPromotionList = db.prometricpromotions.Where(i => i.SiteId == siteID).ToList();
-                ViewBag.siteId = siteID;
-                ViewBag.PromotionExists = prometricPromotionList.Count;
-                if (db.prometrics.Find(siteID).IsHired == true)
-                {
-                    return RedirectToAction("CustomerPrometricError");
-                }
-                else
-                {
-                    return View(prometricPromotionList);
-                }
-            }
+            var promotionslist = proxy.getPrometricPromotionWithSiteId(siteid);
+            ViewBag.siteId = siteid;
+            ViewBag.PromotionExists = promotionslist.Count;
+            return View(promotionslist);
         }
 
-        public ActionResult Create(int id)
+        public ActionResult create(int id)
         {
-            ViewBag.passedSiteId = id;
+            ViewBag.passedsiteid = id;
             return View();
         }
 
@@ -47,55 +37,36 @@ namespace CodeTechnologiesMVCADO.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(prometricpromotion ppObj)
+        public ActionResult create(PrometricPromotions ppobj)
         {
-            using (var db = new sadiqEntities2())
-            {
-                db.prometricpromotions.Add(ppObj);
-                db.SaveChanges();
-                return RedirectToAction("IndexWithId", new { siteID = ppObj.SiteId });
-            }
+            proxy.AddPrometricPromotion(ppobj);
+            return RedirectToAction("Indexwithid", new { siteid = ppobj.SiteId });
+
         }
 
-        public ActionResult Details(int id)
+        public ActionResult details(int id)
         {
-            using (var db = new sadiqEntities2())
-            {
-                prometricpromotion ppObj = db.prometricpromotions.Find(id);
-                return View(ppObj);
-            }
+            var ppObj = proxy.getPrometricPromotion(id);
+            return View(ppObj);
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult edit(int id)
         {
-            using (var db = new sadiqEntities2())
-            {
-                prometricpromotion ppObj = db.prometricpromotions.Find(id);
-                return View(ppObj);
-            }
+            var ppObj = proxy.getPrometricPromotion(id);
+            return View(ppObj);
         }
 
         [HttpPost]
-        public ActionResult Edit(prometricpromotion ppObj)
+        public ActionResult edit(PrometricPromotions ppobj)
         {
-            using (var db = new sadiqEntities2())
-            {
-                prometricpromotion localObj = db.prometricpromotions.Where(i => i.id == ppObj.id).SingleOrDefault();
-                db.Entry(localObj).CurrentValues.SetValues(ppObj);
-                db.SaveChanges();
-                return RedirectToAction("IndexWithId", new { siteID = ppObj.SiteId });
-            }
+            proxy.UpdatePrometricPromotion(ppobj);
+            return RedirectToAction("Indexwithid", new { siteid = ppobj.SiteId });
         }
 
-        public ActionResult Delete(int id, int? siteId)
+        public ActionResult delete(int id, int? siteid)
         {
-            using (var db = new sadiqEntities2())
-            {
-                prometricpromotion ppObj = db.prometricpromotions.Where(i => i.id == id).SingleOrDefault();
-                db.prometricpromotions.Remove(ppObj);
-                db.SaveChanges();
-                return RedirectToAction("IndexWithId", new { siteID = siteId });
-            }
+            proxy.DeletePrometricPromotion(id);
+            return RedirectToAction("Indexwithid", new { siteid = siteid });
         }
 
     }
