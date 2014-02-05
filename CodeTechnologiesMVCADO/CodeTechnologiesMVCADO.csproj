@@ -324,6 +324,9 @@
     <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.PrometricPromotions.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.Institute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.disco" />
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices4.xsd">
       <SubType>Designer</SubType>
@@ -407,7 +410,7 @@
     <Content Include="Views\Promotions\Indexwithid.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\ExcelFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

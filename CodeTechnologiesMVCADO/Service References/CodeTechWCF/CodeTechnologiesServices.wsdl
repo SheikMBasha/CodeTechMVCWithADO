@@ -135,6 +135,36 @@
   <wsdl:message name="ICodeTechnologiesServices_DeletePrometricPromotion_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletePrometricPromotionResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllInstitutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstitutes" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllInstitutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstitutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddInstitute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInstitute" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddInstitute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getInstitute_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInstitute" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getInstitute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateInstitute_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInstitute" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateInstitute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteInstitute_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstitute" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteInstitute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstituteResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
       <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
@@ -219,6 +249,26 @@
     <wsdl:operation name="DeletePrometricPromotion">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion" message="tns:ICodeTechnologiesServices_DeletePrometricPromotion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotionResponse" message="tns:ICodeTechnologiesServices_DeletePrometricPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstitutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/GetAllInstitutes" message="tns:ICodeTechnologiesServices_GetAllInstitutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/GetAllInstitutesResponse" message="tns:ICodeTechnologiesServices_GetAllInstitutes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstitute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/AddInstitute" message="tns:ICodeTechnologiesServices_AddInstitute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/AddInstituteResponse" message="tns:ICodeTechnologiesServices_AddInstitute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInstitute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/getInstitute" message="tns:ICodeTechnologiesServices_getInstitute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/getInstituteResponse" message="tns:ICodeTechnologiesServices_getInstitute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstitute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/UpdateInstitute" message="tns:ICodeTechnologiesServices_UpdateInstitute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/UpdateInstituteResponse" message="tns:ICodeTechnologiesServices_UpdateInstitute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstitute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/DeleteInstitute" message="tns:ICodeTechnologiesServices_DeleteInstitute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/DeleteInstituteResponse" message="tns:ICodeTechnologiesServices_DeleteInstitute_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -405,6 +455,51 @@
     </wsdl:operation>
     <wsdl:operation name="DeletePrometricPromotion">
       <soap:operation soapAction="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstitutes">
+      <soap:operation soapAction="http://tempuri.org/IInstitute/GetAllInstitutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstitute">
+      <soap:operation soapAction="http://tempuri.org/IInstitute/AddInstitute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInstitute">
+      <soap:operation soapAction="http://tempuri.org/IInstitute/getInstitute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstitute">
+      <soap:operation soapAction="http://tempuri.org/IInstitute/UpdateInstitute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstitute">
+      <soap:operation soapAction="http://tempuri.org/IInstitute/DeleteInstitute" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

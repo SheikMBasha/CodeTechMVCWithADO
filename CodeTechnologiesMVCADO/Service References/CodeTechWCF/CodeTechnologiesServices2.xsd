@@ -27,7 +27,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ExamNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamNature" type="xs:int" />
       <xs:element minOccurs="0" name="ExamId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="VoucherId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CandidateId" nillable="true" type="xs:string" />
@@ -82,4 +82,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PrometricPromotions" nillable="true" type="tns:PrometricPromotions" />
+  <xs:complexType name="ArrayOfInstitute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Institute" nillable="true" type="tns:Institute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstitute" nillable="true" type="tns:ArrayOfInstitute" />
+  <xs:complexType name="Institute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POCName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" type="xs:long" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditAllowed" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreditRemaining" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Institute" nillable="true" type="tns:Institute" />
 </xs:schema>

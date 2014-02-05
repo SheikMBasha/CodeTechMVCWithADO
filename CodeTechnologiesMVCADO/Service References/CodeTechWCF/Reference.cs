@@ -369,7 +369,7 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ExamNatureField;
+        private int ExamNatureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ExamIdField;
@@ -447,12 +447,12 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public string ExamNature {
+        public int ExamNature {
             get {
                 return this.ExamNatureField;
             }
             set {
-                if ((object.ReferenceEquals(this.ExamNatureField, value) != true)) {
+                if ((this.ExamNatureField.Equals(value) != true)) {
                     this.ExamNatureField = value;
                     this.RaisePropertyChanged("ExamNature");
                 }
@@ -1029,6 +1029,163 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Institute", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class Institute : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string POCNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CreditAllowedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CreditRemainingField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string POCName {
+            get {
+                return this.POCNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.POCNameField, value) != true)) {
+                    this.POCNameField = value;
+                    this.RaisePropertyChanged("POCName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((this.PhoneField.Equals(value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public System.Nullable<int> CreditAllowed {
+            get {
+                return this.CreditAllowedField;
+            }
+            set {
+                if ((this.CreditAllowedField.Equals(value) != true)) {
+                    this.CreditAllowedField = value;
+                    this.RaisePropertyChanged("CreditAllowed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public System.Nullable<int> CreditRemaining {
+            get {
+                return this.CreditRemainingField;
+            }
+            set {
+                if ((this.CreditRemainingField.Equals(value) != true)) {
+                    this.CreditRemainingField = value;
+                    this.RaisePropertyChanged("CreditRemaining");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CodeTechWCF.ICodeTechnologiesServices")]
     public interface ICodeTechnologiesServices {
@@ -1158,6 +1315,36 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotion", ReplyAction="http://tempuri.org/IPrometricPromotions/DeletePrometricPromotionResponse")]
         System.Threading.Tasks.Task DeletePrometricPromotionAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/GetAllInstitutes", ReplyAction="http://tempuri.org/IInstitute/GetAllInstitutesResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Institute> GetAllInstitutes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/GetAllInstitutes", ReplyAction="http://tempuri.org/IInstitute/GetAllInstitutesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Institute>> GetAllInstitutesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/AddInstitute", ReplyAction="http://tempuri.org/IInstitute/AddInstituteResponse")]
+        void AddInstitute(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/AddInstitute", ReplyAction="http://tempuri.org/IInstitute/AddInstituteResponse")]
+        System.Threading.Tasks.Task AddInstituteAsync(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/getInstitute", ReplyAction="http://tempuri.org/IInstitute/getInstituteResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.Institute getInstitute(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/getInstitute", ReplyAction="http://tempuri.org/IInstitute/getInstituteResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Institute> getInstituteAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/UpdateInstitute", ReplyAction="http://tempuri.org/IInstitute/UpdateInstituteResponse")]
+        void UpdateInstitute(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/UpdateInstitute", ReplyAction="http://tempuri.org/IInstitute/UpdateInstituteResponse")]
+        System.Threading.Tasks.Task UpdateInstituteAsync(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/DeleteInstitute", ReplyAction="http://tempuri.org/IInstitute/DeleteInstituteResponse")]
+        void DeleteInstitute(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/DeleteInstitute", ReplyAction="http://tempuri.org/IInstitute/DeleteInstituteResponse")]
+        System.Threading.Tasks.Task DeleteInstituteAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1353,6 +1540,46 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task DeletePrometricPromotionAsync(int id) {
             return base.Channel.DeletePrometricPromotionAsync(id);
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Institute> GetAllInstitutes() {
+            return base.Channel.GetAllInstitutes();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Institute>> GetAllInstitutesAsync() {
+            return base.Channel.GetAllInstitutesAsync();
+        }
+        
+        public void AddInstitute(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj) {
+            base.Channel.AddInstitute(instiObj);
+        }
+        
+        public System.Threading.Tasks.Task AddInstituteAsync(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj) {
+            return base.Channel.AddInstituteAsync(instiObj);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.Institute getInstitute(int id) {
+            return base.Channel.getInstitute(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Institute> getInstituteAsync(int id) {
+            return base.Channel.getInstituteAsync(id);
+        }
+        
+        public void UpdateInstitute(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj) {
+            base.Channel.UpdateInstitute(instiObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdateInstituteAsync(CodeTechnologiesMVCADO.CodeTechWCF.Institute instiObj) {
+            return base.Channel.UpdateInstituteAsync(instiObj);
+        }
+        
+        public void DeleteInstitute(int id) {
+            base.Channel.DeleteInstitute(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteInstituteAsync(int id) {
+            return base.Channel.DeleteInstituteAsync(id);
         }
     }
 }
