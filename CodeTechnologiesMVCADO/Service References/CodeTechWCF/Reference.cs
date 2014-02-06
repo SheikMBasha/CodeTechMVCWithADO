@@ -1186,6 +1186,464 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Expense", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class Expense : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExpenseTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> AmountPaidField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PaymentChannelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> SiteIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string ExpenseType {
+            get {
+                return this.ExpenseTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExpenseTypeField, value) != true)) {
+                    this.ExpenseTypeField = value;
+                    this.RaisePropertyChanged("ExpenseType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public System.Nullable<int> AmountPaid {
+            get {
+                return this.AmountPaidField;
+            }
+            set {
+                if ((this.AmountPaidField.Equals(value) != true)) {
+                    this.AmountPaidField = value;
+                    this.RaisePropertyChanged("AmountPaid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public System.Nullable<System.DateTime> Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string PaymentChannel {
+            get {
+                return this.PaymentChannelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PaymentChannelField, value) != true)) {
+                    this.PaymentChannelField = value;
+                    this.RaisePropertyChanged("PaymentChannel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public System.Nullable<int> SiteId {
+            get {
+                return this.SiteIdField;
+            }
+            set {
+                if ((this.SiteIdField.Equals(value) != true)) {
+                    this.SiteIdField = value;
+                    this.RaisePropertyChanged("SiteId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PearsonCandidate", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class PearsonCandidate : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ExamNatureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExamIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VoucherIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CiscoClientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExamStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttemptsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ExamDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExamEmailAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExamEmailPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int InstituteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AcademyIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ConnectionIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SiteIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public int ExamNature {
+            get {
+                return this.ExamNatureField;
+            }
+            set {
+                if ((this.ExamNatureField.Equals(value) != true)) {
+                    this.ExamNatureField = value;
+                    this.RaisePropertyChanged("ExamNature");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string ExamId {
+            get {
+                return this.ExamIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExamIdField, value) != true)) {
+                    this.ExamIdField = value;
+                    this.RaisePropertyChanged("ExamId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public string VoucherId {
+            get {
+                return this.VoucherIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VoucherIdField, value) != true)) {
+                    this.VoucherIdField = value;
+                    this.RaisePropertyChanged("VoucherId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public string CiscoClientId {
+            get {
+                return this.CiscoClientIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CiscoClientIdField, value) != true)) {
+                    this.CiscoClientIdField = value;
+                    this.RaisePropertyChanged("CiscoClientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public string ExamStatus {
+            get {
+                return this.ExamStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExamStatusField, value) != true)) {
+                    this.ExamStatusField = value;
+                    this.RaisePropertyChanged("ExamStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public string Attempts {
+            get {
+                return this.AttemptsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttemptsField, value) != true)) {
+                    this.AttemptsField = value;
+                    this.RaisePropertyChanged("Attempts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public System.DateTime ExamDate {
+            get {
+                return this.ExamDateField;
+            }
+            set {
+                if ((this.ExamDateField.Equals(value) != true)) {
+                    this.ExamDateField = value;
+                    this.RaisePropertyChanged("ExamDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=10)]
+        public string EmailAddress {
+            get {
+                return this.EmailAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailAddressField, value) != true)) {
+                    this.EmailAddressField = value;
+                    this.RaisePropertyChanged("EmailAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=11)]
+        public string ExamEmailAddress {
+            get {
+                return this.ExamEmailAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExamEmailAddressField, value) != true)) {
+                    this.ExamEmailAddressField = value;
+                    this.RaisePropertyChanged("ExamEmailAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=12)]
+        public string ExamEmailPassword {
+            get {
+                return this.ExamEmailPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExamEmailPasswordField, value) != true)) {
+                    this.ExamEmailPasswordField = value;
+                    this.RaisePropertyChanged("ExamEmailPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=13)]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=14)]
+        public int Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((this.PhoneField.Equals(value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=15)]
+        public int InstituteId {
+            get {
+                return this.InstituteIdField;
+            }
+            set {
+                if ((this.InstituteIdField.Equals(value) != true)) {
+                    this.InstituteIdField = value;
+                    this.RaisePropertyChanged("InstituteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=16)]
+        public int AcademyId {
+            get {
+                return this.AcademyIdField;
+            }
+            set {
+                if ((this.AcademyIdField.Equals(value) != true)) {
+                    this.AcademyIdField = value;
+                    this.RaisePropertyChanged("AcademyId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=17)]
+        public string ConnectionId {
+            get {
+                return this.ConnectionIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ConnectionIdField, value) != true)) {
+                    this.ConnectionIdField = value;
+                    this.RaisePropertyChanged("ConnectionId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=18)]
+        public int SiteId {
+            get {
+                return this.SiteIdField;
+            }
+            set {
+                if ((this.SiteIdField.Equals(value) != true)) {
+                    this.SiteIdField = value;
+                    this.RaisePropertyChanged("SiteId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CodeTechWCF.ICodeTechnologiesServices")]
     public interface ICodeTechnologiesServices {
@@ -1249,6 +1707,30 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates", ReplyAction="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidatesResponse")]
         System.Threading.Tasks.Task BulkUploadPrometricCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/AddPrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/AddPrometricCandidateResponse")]
+        void AddPrometricCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/AddPrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/AddPrometricCandidateResponse")]
+        System.Threading.Tasks.Task AddPrometricCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/getPrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/getPrometricCandidateResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate getPrometricCandidate(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/getPrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/getPrometricCandidateResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate> getPrometricCandidateAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidateResponse")]
+        void UpdatePrometricCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidateResponse")]
+        System.Threading.Tasks.Task UpdatePrometricCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidateResponse")]
+        void DeletePrometricCandidate(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidate", ReplyAction="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidateResponse")]
+        System.Threading.Tasks.Task DeletePrometricCandidateAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPrometric/GetAllPrometrics", ReplyAction="http://tempuri.org/IPrometric/GetAllPrometricsResponse")]
         System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics();
@@ -1345,6 +1827,72 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInstitute/DeleteInstitute", ReplyAction="http://tempuri.org/IInstitute/DeleteInstituteResponse")]
         System.Threading.Tasks.Task DeleteInstituteAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/getAllExpenses", ReplyAction="http://tempuri.org/IExpense/getAllExpensesResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Expense> getAllExpenses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/getAllExpenses", ReplyAction="http://tempuri.org/IExpense/getAllExpensesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Expense>> getAllExpensesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/getExpense", ReplyAction="http://tempuri.org/IExpense/getExpenseResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.Expense getExpense(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/getExpense", ReplyAction="http://tempuri.org/IExpense/getExpenseResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Expense> getExpenseAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/AddExpense", ReplyAction="http://tempuri.org/IExpense/AddExpenseResponse")]
+        void AddExpense(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/AddExpense", ReplyAction="http://tempuri.org/IExpense/AddExpenseResponse")]
+        System.Threading.Tasks.Task AddExpenseAsync(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/UpdateExpense", ReplyAction="http://tempuri.org/IExpense/UpdateExpenseResponse")]
+        void UpdateExpense(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/UpdateExpense", ReplyAction="http://tempuri.org/IExpense/UpdateExpenseResponse")]
+        System.Threading.Tasks.Task UpdateExpenseAsync(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/DeleteExpense", ReplyAction="http://tempuri.org/IExpense/DeleteExpenseResponse")]
+        void DeleteExpense(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExpense/DeleteExpense", ReplyAction="http://tempuri.org/IExpense/DeleteExpenseResponse")]
+        System.Threading.Tasks.Task DeleteExpenseAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidates", ReplyAction="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidatesResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate> GetAllPearsonCandidates();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidates", ReplyAction="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidatesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate>> GetAllPearsonCandidatesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidates", ReplyAction="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidatesResponse")]
+        void BulkUploadPearsonCandidates(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidates", ReplyAction="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidatesResponse")]
+        System.Threading.Tasks.Task BulkUploadPearsonCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/AddPearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/AddPearsonCandidateResponse")]
+        void AddPearsonCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/AddPearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/AddPearsonCandidateResponse")]
+        System.Threading.Tasks.Task AddPearsonCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/getPearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/getPearsonCandidateResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate getPearsonCandidate(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/getPearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/getPearsonCandidateResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate> getPearsonCandidateAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidateResponse")]
+        void UpdatePearsonCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidateResponse")]
+        System.Threading.Tasks.Task UpdatePearsonCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidateResponse")]
+        void DeletePearsonCandidate(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidateResponse")]
+        System.Threading.Tasks.Task DeletePearsonCandidateAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1452,6 +2000,38 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task BulkUploadPrometricCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel) {
             return base.Channel.BulkUploadPrometricCandidatesAsync(inputexcel);
+        }
+        
+        public void AddPrometricCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj) {
+            base.Channel.AddPrometricCandidate(pcObj);
+        }
+        
+        public System.Threading.Tasks.Task AddPrometricCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj) {
+            return base.Channel.AddPrometricCandidateAsync(pcObj);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate getPrometricCandidate(int id) {
+            return base.Channel.getPrometricCandidate(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate> getPrometricCandidateAsync(int id) {
+            return base.Channel.getPrometricCandidateAsync(id);
+        }
+        
+        public void UpdatePrometricCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj) {
+            base.Channel.UpdatePrometricCandidate(pcObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePrometricCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PrometricCandidate pcObj) {
+            return base.Channel.UpdatePrometricCandidateAsync(pcObj);
+        }
+        
+        public void DeletePrometricCandidate(int id) {
+            base.Channel.DeletePrometricCandidate(id);
+        }
+        
+        public System.Threading.Tasks.Task DeletePrometricCandidateAsync(int id) {
+            return base.Channel.DeletePrometricCandidateAsync(id);
         }
         
         public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Prometric> GetAllPrometrics() {
@@ -1580,6 +2160,94 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task DeleteInstituteAsync(int id) {
             return base.Channel.DeleteInstituteAsync(id);
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Expense> getAllExpenses() {
+            return base.Channel.getAllExpenses();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.Expense>> getAllExpensesAsync() {
+            return base.Channel.getAllExpensesAsync();
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.Expense getExpense(int id) {
+            return base.Channel.getExpense(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.Expense> getExpenseAsync(int id) {
+            return base.Channel.getExpenseAsync(id);
+        }
+        
+        public void AddExpense(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj) {
+            base.Channel.AddExpense(expObj);
+        }
+        
+        public System.Threading.Tasks.Task AddExpenseAsync(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj) {
+            return base.Channel.AddExpenseAsync(expObj);
+        }
+        
+        public void UpdateExpense(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj) {
+            base.Channel.UpdateExpense(expObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdateExpenseAsync(CodeTechnologiesMVCADO.CodeTechWCF.Expense expObj) {
+            return base.Channel.UpdateExpenseAsync(expObj);
+        }
+        
+        public void DeleteExpense(int id) {
+            base.Channel.DeleteExpense(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteExpenseAsync(int id) {
+            return base.Channel.DeleteExpenseAsync(id);
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate> GetAllPearsonCandidates() {
+            return base.Channel.GetAllPearsonCandidates();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate>> GetAllPearsonCandidatesAsync() {
+            return base.Channel.GetAllPearsonCandidatesAsync();
+        }
+        
+        public void BulkUploadPearsonCandidates(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel) {
+            base.Channel.BulkUploadPearsonCandidates(inputexcel);
+        }
+        
+        public System.Threading.Tasks.Task BulkUploadPearsonCandidatesAsync(CodeTechnologiesMVCADO.CodeTechWCF.FileData inputexcel) {
+            return base.Channel.BulkUploadPearsonCandidatesAsync(inputexcel);
+        }
+        
+        public void AddPearsonCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj) {
+            base.Channel.AddPearsonCandidate(pcObj);
+        }
+        
+        public System.Threading.Tasks.Task AddPearsonCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj) {
+            return base.Channel.AddPearsonCandidateAsync(pcObj);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate getPearsonCandidate(int id) {
+            return base.Channel.getPearsonCandidate(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate> getPearsonCandidateAsync(int id) {
+            return base.Channel.getPearsonCandidateAsync(id);
+        }
+        
+        public void UpdatePearsonCandidate(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj) {
+            base.Channel.UpdatePearsonCandidate(pcObj);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePearsonCandidateAsync(CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate pcObj) {
+            return base.Channel.UpdatePearsonCandidateAsync(pcObj);
+        }
+        
+        public void DeletePearsonCandidate(int id) {
+            base.Channel.DeletePearsonCandidate(id);
+        }
+        
+        public System.Threading.Tasks.Task DeletePearsonCandidateAsync(int id) {
+            return base.Channel.DeletePearsonCandidateAsync(id);
         }
     }
 }

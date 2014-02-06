@@ -69,6 +69,30 @@
   <wsdl:message name="ICodeTechnologiesServices_BulkUploadPrometricCandidates_OutputMessage">
     <wsdl:part name="parameters" element="tns:BulkUploadPrometricCandidatesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPrometricCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrometricCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPrometricCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPrometricCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPrometricCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPrometricCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePrometricCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrometricCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePrometricCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePrometricCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePrometricCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrometricCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePrometricCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePrometricCandidateResponse" />
+  </wsdl:message>
   <wsdl:message name="ICodeTechnologiesServices_GetAllPrometrics_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPrometrics" />
   </wsdl:message>
@@ -165,6 +189,72 @@
   <wsdl:message name="ICodeTechnologiesServices_DeleteInstitute_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteInstituteResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAllExpenses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllExpenses" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getAllExpenses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllExpensesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExpense" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpense" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExpense" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdateExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteExpense_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpense" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeleteExpense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllPearsonCandidates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPearsonCandidates" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllPearsonCandidates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPearsonCandidatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_BulkUploadPearsonCandidates_InputMessage">
+    <wsdl:part name="parameters" element="tns:BulkUploadPearsonCandidates" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_BulkUploadPearsonCandidates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BulkUploadPearsonCandidatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPearsonCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPearsonCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddPearsonCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPearsonCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPearsonCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPearsonCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_getPearsonCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPearsonCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePearsonCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePearsonCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePearsonCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePearsonCandidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePearsonCandidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePearsonCandidate" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePearsonCandidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePearsonCandidateResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
       <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
@@ -205,6 +295,22 @@
     <wsdl:operation name="BulkUploadPrometricCandidates">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates" message="tns:ICodeTechnologiesServices_BulkUploadPrometricCandidates_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidatesResponse" message="tns:ICodeTechnologiesServices_BulkUploadPrometricCandidates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPrometricCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/AddPrometricCandidate" message="tns:ICodeTechnologiesServices_AddPrometricCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/AddPrometricCandidateResponse" message="tns:ICodeTechnologiesServices_AddPrometricCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/getPrometricCandidate" message="tns:ICodeTechnologiesServices_getPrometricCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/getPrometricCandidateResponse" message="tns:ICodeTechnologiesServices_getPrometricCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrometricCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidate" message="tns:ICodeTechnologiesServices_UpdatePrometricCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidateResponse" message="tns:ICodeTechnologiesServices_UpdatePrometricCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrometricCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidate" message="tns:ICodeTechnologiesServices_DeletePrometricCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidateResponse" message="tns:ICodeTechnologiesServices_DeletePrometricCandidate_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllPrometrics">
       <wsdl:input wsaw:Action="http://tempuri.org/IPrometric/GetAllPrometrics" message="tns:ICodeTechnologiesServices_GetAllPrometrics_InputMessage" />
@@ -269,6 +375,50 @@
     <wsdl:operation name="DeleteInstitute">
       <wsdl:input wsaw:Action="http://tempuri.org/IInstitute/DeleteInstitute" message="tns:ICodeTechnologiesServices_DeleteInstitute_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IInstitute/DeleteInstituteResponse" message="tns:ICodeTechnologiesServices_DeleteInstitute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllExpenses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpense/getAllExpenses" message="tns:ICodeTechnologiesServices_getAllExpenses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpense/getAllExpensesResponse" message="tns:ICodeTechnologiesServices_getAllExpenses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpense/getExpense" message="tns:ICodeTechnologiesServices_getExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpense/getExpenseResponse" message="tns:ICodeTechnologiesServices_getExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpense/AddExpense" message="tns:ICodeTechnologiesServices_AddExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpense/AddExpenseResponse" message="tns:ICodeTechnologiesServices_AddExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpense/UpdateExpense" message="tns:ICodeTechnologiesServices_UpdateExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpense/UpdateExpenseResponse" message="tns:ICodeTechnologiesServices_UpdateExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExpense/DeleteExpense" message="tns:ICodeTechnologiesServices_DeleteExpense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExpense/DeleteExpenseResponse" message="tns:ICodeTechnologiesServices_DeleteExpense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPearsonCandidates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidates" message="tns:ICodeTechnologiesServices_GetAllPearsonCandidates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidatesResponse" message="tns:ICodeTechnologiesServices_GetAllPearsonCandidates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BulkUploadPearsonCandidates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidates" message="tns:ICodeTechnologiesServices_BulkUploadPearsonCandidates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidatesResponse" message="tns:ICodeTechnologiesServices_BulkUploadPearsonCandidates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPearsonCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/AddPearsonCandidate" message="tns:ICodeTechnologiesServices_AddPearsonCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/AddPearsonCandidateResponse" message="tns:ICodeTechnologiesServices_AddPearsonCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPearsonCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/getPearsonCandidate" message="tns:ICodeTechnologiesServices_getPearsonCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/getPearsonCandidateResponse" message="tns:ICodeTechnologiesServices_getPearsonCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePearsonCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidate" message="tns:ICodeTechnologiesServices_UpdatePearsonCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidateResponse" message="tns:ICodeTechnologiesServices_UpdatePearsonCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePearsonCandidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate" message="tns:ICodeTechnologiesServices_DeletePearsonCandidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidateResponse" message="tns:ICodeTechnologiesServices_DeletePearsonCandidate_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -356,6 +506,42 @@
     </wsdl:operation>
     <wsdl:operation name="BulkUploadPrometricCandidates">
       <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/BulkUploadPrometricCandidates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPrometricCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/AddPrometricCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrometricCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/getPrometricCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePrometricCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/UpdatePrometricCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePrometricCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPrometricCandidate/DeletePrometricCandidate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -500,6 +686,105 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteInstitute">
       <soap:operation soapAction="http://tempuri.org/IInstitute/DeleteInstitute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllExpenses">
+      <soap:operation soapAction="http://tempuri.org/IExpense/getAllExpenses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpense/getExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpense/AddExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpense/UpdateExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpense">
+      <soap:operation soapAction="http://tempuri.org/IExpense/DeleteExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPearsonCandidates">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/GetAllPearsonCandidates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BulkUploadPearsonCandidates">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/BulkUploadPearsonCandidates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPearsonCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/AddPearsonCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPearsonCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/getPearsonCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePearsonCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/UpdatePearsonCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePearsonCandidate">
+      <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

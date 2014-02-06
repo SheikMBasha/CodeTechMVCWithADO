@@ -101,4 +101,51 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Institute" nillable="true" type="tns:Institute" />
+  <xs:complexType name="ArrayOfExpense">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Expense" nillable="true" type="tns:Expense" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpense" nillable="true" type="tns:ArrayOfExpense" />
+  <xs:complexType name="Expense">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ExpenseType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmountPaid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentChannel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Expense" nillable="true" type="tns:Expense" />
+  <xs:complexType name="ArrayOfPearsonCandidate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PearsonCandidate" nillable="true" type="tns:PearsonCandidate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPearsonCandidate" nillable="true" type="tns:ArrayOfPearsonCandidate" />
+  <xs:complexType name="PearsonCandidate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamNature" type="xs:int" />
+      <xs:element minOccurs="0" name="ExamId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CiscoClientId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Attempts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamEmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamEmailPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" type="xs:int" />
+      <xs:element minOccurs="0" name="InstituteId" type="xs:int" />
+      <xs:element minOccurs="0" name="AcademyId" type="xs:int" />
+      <xs:element minOccurs="0" name="ConnectionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PearsonCandidate" nillable="true" type="tns:PearsonCandidate" />
 </xs:schema>
