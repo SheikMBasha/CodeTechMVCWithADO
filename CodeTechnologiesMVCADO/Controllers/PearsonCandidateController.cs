@@ -9,14 +9,14 @@ using System.Web.Mvc;
 
 namespace CodeTechnologiesMVCADO.Controllers
 {
-    public class PrometricCandidateController : Controller
+    public class PearsonCandidateController : Controller
     {
         CodeTechnologiesServicesClient proxy = new CodeTechnologiesServicesClient();
         // GET: /PrometricCandidate/
 
         public ActionResult Index()
         {
-            var pclist = proxy.GetAllPrometricCandidates();
+            var pclist = proxy.GetAllPearsonCandidates();
             return View(pclist);
         }
 
@@ -33,9 +33,9 @@ namespace CodeTechnologiesMVCADO.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(PrometricCandidate pcObj)
+        public ActionResult Create(PearsonCandidate pcObj)
         {
-            proxy.AddPrometricCandidate(pcObj);
+            proxy.AddPearsonCandidate(pcObj);
             return RedirectToAction("Index");
         }
 
@@ -69,7 +69,7 @@ namespace CodeTechnologiesMVCADO.Controllers
                             bufferData = bufferedDataToWrite;
                         }
 
-                        proxy.BulkUploadPrometricCandidates(new FileData
+                        proxy.BulkUploadPearsonCandidates(new FileData
                         {
                             FileName = Request.Files["FileUpload"].FileName,
                             BufferData = bufferData,
@@ -97,26 +97,26 @@ namespace CodeTechnologiesMVCADO.Controllers
 
         public ActionResult Edit(int id)
         {
-            var pcObj = proxy.getPrometricCandidate(id);
+            var pcObj = proxy.getPearsonCandidate(id);
             return View(pcObj);
         }
 
         [HttpPost]
-        public ActionResult Edit(PrometricCandidate pcObj)
+        public ActionResult Edit(PearsonCandidate pcObj)
         {
-            proxy.UpdatePrometricCandidate(pcObj);
+            proxy.UpdatePearsonCandidate(pcObj);
             return RedirectToAction("Index");
         }
 
         public ActionResult Details(int id)
         {
-            var pcObj = proxy.getPrometricCandidate(id);
+            var pcObj = proxy.getPearsonCandidate(id);
             return View(pcObj);
         }
 
         public ActionResult Delete(int id)
         {
-            proxy.DeletePrometricCandidate(id);
+            proxy.DeletePearsonCandidate(id);
             return RedirectToAction("Index");
         }
 

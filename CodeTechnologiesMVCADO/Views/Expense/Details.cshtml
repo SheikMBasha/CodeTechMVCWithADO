@@ -1,0 +1,50 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.Expense
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Expense</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExpenseType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpenseType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AmountPaid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AmountPaid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PaymentChannel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PaymentChannel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,145 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>PearsonCandidate</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamNature)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamNature)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VoucherId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VoucherId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CiscoClientId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CiscoClientId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Attempts)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Attempts)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmailAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamEmailAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamEmailAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExamEmailPassword)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExamEmailPassword)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstituteId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstituteId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AcademyId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AcademyId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ConnectionId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ConnectionId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteId)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

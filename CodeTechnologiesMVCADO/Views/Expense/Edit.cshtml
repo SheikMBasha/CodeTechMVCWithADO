@@ -1,0 +1,75 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.Expense
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Expense</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ExpenseType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ExpenseType)
+            @Html.ValidationMessageFor(model => model.ExpenseType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AmountPaid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AmountPaid)
+            @Html.ValidationMessageFor(model => model.AmountPaid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Date, new { @class = "datefield"})
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PaymentChannel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PaymentChannel)
+            @Html.ValidationMessageFor(model => model.PaymentChannel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.SiteId, ViewBag.SiteIds as List<SelectListItem>)
+            @Html.ValidationMessageFor(model => model.SiteId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".datefield").datepicker();
+        });
+    </script>
+}

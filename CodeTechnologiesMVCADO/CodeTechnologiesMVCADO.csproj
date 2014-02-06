@@ -193,7 +193,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AcademyController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ExpenseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PearsonCandidateController.cs" />
     <Compile Include="Controllers\PrometricCandidateController.cs" />
     <Compile Include="Controllers\PrometricController.cs" />
     <Compile Include="Controllers\PromotionsController.cs" />
@@ -337,7 +339,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -359,23 +363,6 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.wsdl" />
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.xsd">
       <SubType>Designer</SubType>
@@ -389,25 +376,56 @@
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Academy\Index.cshtml" />
     <Content Include="Views\Academy\Create.cshtml" />
+    <Content Include="Views\Academy\Delete.cshtml" />
     <Content Include="Views\Academy\Details.cshtml" />
     <Content Include="Views\Academy\Edit.cshtml" />
-    <Content Include="Views\Academy\Delete.cshtml" />
+    <Content Include="Views\Academy\Index.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Expense\Create.cshtml" />
+    <Content Include="Views\Expense\Delete.cshtml" />
+    <Content Include="Views\Expense\Details.cshtml" />
+    <Content Include="Views\Expense\Edit.cshtml" />
+    <Content Include="Views\Expense\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PearsonCandidate\BulkUpload.cshtml" />
+    <Content Include="Views\PearsonCandidate\Create.cshtml" />
+    <Content Include="Views\PearsonCandidate\Delete.cshtml" />
+    <Content Include="Views\PearsonCandidate\Details.cshtml" />
+    <Content Include="Views\PearsonCandidate\Edit.cshtml" />
+    <Content Include="Views\PearsonCandidate\Index.cshtml" />
+    <Content Include="Views\PrometricCandidate\BulkUpload.cshtml" />
+    <Content Include="Views\PrometricCandidate\Create.cshtml" />
+    <Content Include="Views\PrometricCandidate\Delete.cshtml" />
+    <Content Include="Views\PrometricCandidate\Details.cshtml" />
+    <Content Include="Views\PrometricCandidate\Edit.cshtml" />
+    <Content Include="Views\PrometricCandidate\Index.cshtml" />
     <Content Include="Views\Prometric\Create.cshtml" />
     <Content Include="Views\Prometric\Delete.cshtml" />
     <Content Include="Views\Prometric\Details.cshtml" />
     <Content Include="Views\Prometric\Edit.cshtml" />
     <Content Include="Views\Prometric\Index.cshtml" />
-    <Content Include="Views\PrometricCandidate\BulkUpload.cshtml" />
-    <Content Include="Views\PrometricCandidate\Create.cshtml" />
-    <Content Include="Views\PrometricCandidate\Index.cshtml" />
     <Content Include="Views\Promotions\create.cshtml" />
     <Content Include="Views\Promotions\delete.cshtml" />
     <Content Include="Views\Promotions\details.cshtml" />
     <Content Include="Views\Promotions\edit.cshtml" />
     <Content Include="Views\Promotions\Index.cshtml" />
     <Content Include="Views\Promotions\Indexwithid.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\ExcelFiles\" />
