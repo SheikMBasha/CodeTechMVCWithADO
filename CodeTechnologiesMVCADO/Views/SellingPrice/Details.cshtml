@@ -1,0 +1,78 @@
+﻿@model CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SellingPricing</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.InstituteId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InstituteId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ClientId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ClientId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VoucherType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VoucherType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VoucherNature)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VoucherNature)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PriceWithVoucher)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceWithVoucher)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PriceWithoutVoucher)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceWithoutVoucher)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PriceWithTraining)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceWithTraining)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AbroadPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AbroadPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PriceDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PriceDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
