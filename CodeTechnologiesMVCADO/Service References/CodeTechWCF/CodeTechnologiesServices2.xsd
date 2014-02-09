@@ -148,4 +148,25 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PearsonCandidate" nillable="true" type="tns:PearsonCandidate" />
+  <xs:complexType name="ArrayOfSellingPricing">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SellingPricing" nillable="true" type="tns:SellingPricing" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSellingPricing" nillable="true" type="tns:ArrayOfSellingPricing" />
+  <xs:complexType name="SellingPricing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InstituteId" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherNature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceWithVoucher" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceWithoutVoucher" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceWithTraining" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AbroadPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SellingPricing" nillable="true" type="tns:SellingPricing" />
 </xs:schema>

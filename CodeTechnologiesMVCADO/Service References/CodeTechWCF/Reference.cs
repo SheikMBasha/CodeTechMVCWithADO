@@ -1644,6 +1644,195 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SellingPricing", Namespace="http://schemas.datacontract.org/2004/07/WcfService1.HelperClass")]
+    [System.SerializableAttribute()]
+    public partial class SellingPricing : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int InstituteIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ClientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VoucherTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VoucherNatureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceWithVoucherField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceWithoutVoucherField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceWithTrainingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AbroadPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime PriceDateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int InstituteId {
+            get {
+                return this.InstituteIdField;
+            }
+            set {
+                if ((this.InstituteIdField.Equals(value) != true)) {
+                    this.InstituteIdField = value;
+                    this.RaisePropertyChanged("InstituteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public string ClientId {
+            get {
+                return this.ClientIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientIdField, value) != true)) {
+                    this.ClientIdField = value;
+                    this.RaisePropertyChanged("ClientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public string VoucherType {
+            get {
+                return this.VoucherTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VoucherTypeField, value) != true)) {
+                    this.VoucherTypeField = value;
+                    this.RaisePropertyChanged("VoucherType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public string VoucherNature {
+            get {
+                return this.VoucherNatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VoucherNatureField, value) != true)) {
+                    this.VoucherNatureField = value;
+                    this.RaisePropertyChanged("VoucherNature");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=5)]
+        public decimal PriceWithVoucher {
+            get {
+                return this.PriceWithVoucherField;
+            }
+            set {
+                if ((this.PriceWithVoucherField.Equals(value) != true)) {
+                    this.PriceWithVoucherField = value;
+                    this.RaisePropertyChanged("PriceWithVoucher");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public decimal PriceWithoutVoucher {
+            get {
+                return this.PriceWithoutVoucherField;
+            }
+            set {
+                if ((this.PriceWithoutVoucherField.Equals(value) != true)) {
+                    this.PriceWithoutVoucherField = value;
+                    this.RaisePropertyChanged("PriceWithoutVoucher");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=7)]
+        public decimal PriceWithTraining {
+            get {
+                return this.PriceWithTrainingField;
+            }
+            set {
+                if ((this.PriceWithTrainingField.Equals(value) != true)) {
+                    this.PriceWithTrainingField = value;
+                    this.RaisePropertyChanged("PriceWithTraining");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=8)]
+        public decimal AbroadPrice {
+            get {
+                return this.AbroadPriceField;
+            }
+            set {
+                if ((this.AbroadPriceField.Equals(value) != true)) {
+                    this.AbroadPriceField = value;
+                    this.RaisePropertyChanged("AbroadPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=9)]
+        public System.DateTime PriceDate {
+            get {
+                return this.PriceDateField;
+            }
+            set {
+                if ((this.PriceDateField.Equals(value) != true)) {
+                    this.PriceDateField = value;
+                    this.RaisePropertyChanged("PriceDate");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CodeTechWCF.ICodeTechnologiesServices")]
     public interface ICodeTechnologiesServices {
@@ -1893,6 +2082,36 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate", ReplyAction="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidateResponse")]
         System.Threading.Tasks.Task DeletePearsonCandidateAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/GetAllSellingPrices", ReplyAction="http://tempuri.org/ISellingPricing/GetAllSellingPricesResponse")]
+        System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing> GetAllSellingPrices();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/GetAllSellingPrices", ReplyAction="http://tempuri.org/ISellingPricing/GetAllSellingPricesResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing>> GetAllSellingPricesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/AddNewPricing", ReplyAction="http://tempuri.org/ISellingPricing/AddNewPricingResponse")]
+        void AddNewPricing(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/AddNewPricing", ReplyAction="http://tempuri.org/ISellingPricing/AddNewPricingResponse")]
+        System.Threading.Tasks.Task AddNewPricingAsync(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/GetPricing", ReplyAction="http://tempuri.org/ISellingPricing/GetPricingResponse")]
+        CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing GetPricing(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/GetPricing", ReplyAction="http://tempuri.org/ISellingPricing/GetPricingResponse")]
+        System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing> GetPricingAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/UpdatePricing", ReplyAction="http://tempuri.org/ISellingPricing/UpdatePricingResponse")]
+        void UpdatePricing(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/UpdatePricing", ReplyAction="http://tempuri.org/ISellingPricing/UpdatePricingResponse")]
+        System.Threading.Tasks.Task UpdatePricingAsync(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/DeletePricing", ReplyAction="http://tempuri.org/ISellingPricing/DeletePricingResponse")]
+        void DeletePricing(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISellingPricing/DeletePricing", ReplyAction="http://tempuri.org/ISellingPricing/DeletePricingResponse")]
+        System.Threading.Tasks.Task DeletePricingAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2248,6 +2467,46 @@ namespace CodeTechnologiesMVCADO.CodeTechWCF {
         
         public System.Threading.Tasks.Task DeletePearsonCandidateAsync(int id) {
             return base.Channel.DeletePearsonCandidateAsync(id);
+        }
+        
+        public System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing> GetAllSellingPrices() {
+            return base.Channel.GetAllSellingPrices();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing>> GetAllSellingPricesAsync() {
+            return base.Channel.GetAllSellingPricesAsync();
+        }
+        
+        public void AddNewPricing(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing) {
+            base.Channel.AddNewPricing(pricing);
+        }
+        
+        public System.Threading.Tasks.Task AddNewPricingAsync(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing) {
+            return base.Channel.AddNewPricingAsync(pricing);
+        }
+        
+        public CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing GetPricing(int id) {
+            return base.Channel.GetPricing(id);
+        }
+        
+        public System.Threading.Tasks.Task<CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing> GetPricingAsync(int id) {
+            return base.Channel.GetPricingAsync(id);
+        }
+        
+        public void UpdatePricing(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing) {
+            base.Channel.UpdatePricing(pricing);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePricingAsync(CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing pricing) {
+            return base.Channel.UpdatePricingAsync(pricing);
+        }
+        
+        public void DeletePricing(int id) {
+            base.Channel.DeletePricing(id);
+        }
+        
+        public System.Threading.Tasks.Task DeletePricingAsync(int id) {
+            return base.Channel.DeletePricingAsync(id);
         }
     }
 }

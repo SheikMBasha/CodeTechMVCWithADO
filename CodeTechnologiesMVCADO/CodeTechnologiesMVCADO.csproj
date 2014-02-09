@@ -335,6 +335,9 @@
     <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.PearsonCandidate.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\CodeTechWCF\CodeTechnologiesMVCADO.CodeTechWCF.SellingPricing.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices.disco" />
     <None Include="Service References\CodeTechWCF\CodeTechnologiesServices4.xsd">
       <SubType>Designer</SubType>
@@ -432,6 +435,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\ExcelFiles\" />

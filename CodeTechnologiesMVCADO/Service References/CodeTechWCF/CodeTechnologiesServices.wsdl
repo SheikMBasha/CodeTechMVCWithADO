@@ -255,6 +255,36 @@
   <wsdl:message name="ICodeTechnologiesServices_DeletePearsonCandidate_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletePearsonCandidateResponse" />
   </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllSellingPrices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSellingPrices" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetAllSellingPrices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSellingPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddNewPricing_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewPricing" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_AddNewPricing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewPricingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetPricing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricing" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_GetPricing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPricingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePricing_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePricing" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_UpdatePricing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePricingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePricing_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePricing" />
+  </wsdl:message>
+  <wsdl:message name="ICodeTechnologiesServices_DeletePricing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePricingResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICodeTechnologiesServices">
     <wsdl:operation name="GetAllExamNature">
       <wsdl:input wsaw:Action="http://tempuri.org/IExams/GetAllExamNature" message="tns:ICodeTechnologiesServices_GetAllExamNature_InputMessage" />
@@ -419,6 +449,26 @@
     <wsdl:operation name="DeletePearsonCandidate">
       <wsdl:input wsaw:Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate" message="tns:ICodeTechnologiesServices_DeletePearsonCandidate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidateResponse" message="tns:ICodeTechnologiesServices_DeletePearsonCandidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSellingPrices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISellingPricing/GetAllSellingPrices" message="tns:ICodeTechnologiesServices_GetAllSellingPrices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISellingPricing/GetAllSellingPricesResponse" message="tns:ICodeTechnologiesServices_GetAllSellingPrices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPricing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISellingPricing/AddNewPricing" message="tns:ICodeTechnologiesServices_AddNewPricing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISellingPricing/AddNewPricingResponse" message="tns:ICodeTechnologiesServices_AddNewPricing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISellingPricing/GetPricing" message="tns:ICodeTechnologiesServices_GetPricing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISellingPricing/GetPricingResponse" message="tns:ICodeTechnologiesServices_GetPricing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePricing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISellingPricing/UpdatePricing" message="tns:ICodeTechnologiesServices_UpdatePricing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISellingPricing/UpdatePricingResponse" message="tns:ICodeTechnologiesServices_UpdatePricing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePricing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISellingPricing/DeletePricing" message="tns:ICodeTechnologiesServices_DeletePricing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISellingPricing/DeletePricingResponse" message="tns:ICodeTechnologiesServices_DeletePricing_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICodeTechnologiesServices" type="tns:ICodeTechnologiesServices">
@@ -785,6 +835,51 @@
     </wsdl:operation>
     <wsdl:operation name="DeletePearsonCandidate">
       <soap:operation soapAction="http://tempuri.org/IPearsonCandidate/DeletePearsonCandidate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSellingPrices">
+      <soap:operation soapAction="http://tempuri.org/ISellingPricing/GetAllSellingPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPricing">
+      <soap:operation soapAction="http://tempuri.org/ISellingPricing/AddNewPricing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricing">
+      <soap:operation soapAction="http://tempuri.org/ISellingPricing/GetPricing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePricing">
+      <soap:operation soapAction="http://tempuri.org/ISellingPricing/UpdatePricing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePricing">
+      <soap:operation soapAction="http://tempuri.org/ISellingPricing/DeletePricing" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

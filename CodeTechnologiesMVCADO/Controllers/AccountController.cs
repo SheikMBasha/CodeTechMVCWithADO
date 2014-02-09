@@ -37,6 +37,7 @@ namespace CodeTechnologiesMVCADO.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
+                Session["MyMenu"] = null;
                 return RedirectToLocal(returnUrl);
             }
 
@@ -53,7 +54,7 @@ namespace CodeTechnologiesMVCADO.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
+            Session["MyMenu"] = null;
             return RedirectToAction("Index", "Home");
         }
 
